@@ -1,0 +1,11 @@
+PREFIX ex: <https://ameniki.github.io/japan-cultural-heritage-lod/japan-cultural-heritage.ttl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?site ?label ?criterion
+WHERE {
+  ?site a ex:WorldCulturalHeritageSite ;
+        rdfs:label ?label ;
+        ex:meetsCriterion ?criterion .
+  FILTER(LANG(?label) = "ja")
+}
+ORDER BY ?label ?criterion
