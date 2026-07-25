@@ -1,0 +1,519 @@
+{
+  "head": {
+    "vars": [
+      "site",
+      "siteLabel",
+      "coordSample",
+      "unescoIdSample",
+      "criteria"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q611345"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "紀伊山地の霊場と参詣道"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(135.77639 33.83694)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1142"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038976,Q23038977,Q23038978,Q23038980"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q174139"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "石見銀山"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(132.4375 35.107222)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1246"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038977,Q23038979,Q23038976"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q2896261"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "平泉"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(141.11027778 38.98861111)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1277rev"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038976,Q23038980"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q55619850"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "ル・コルビュジエの建築作品－近代建築運動への顕著な貢献－"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(6.829336 46.468414)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1321rev"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038972,Q23038976,Q23038980"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q16482294"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "富士山-信仰の対象と芸術の源泉"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(138.7275 35.3608)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1418"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038977,Q23038980"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q7769551"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "富岡製糸場と絹産業遺産群"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(138.8878 36.2553)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1449"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038976,Q23038978"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q7751872"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "明治日本の産業革命遺産 製鉄・鉄鋼、造船、石炭産業"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(131.4122222 34.43055556)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1484"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038976,Q23038978"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q93643"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "長崎と天草地方の潜伏キリシタン関連遺産"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(128.903889 32.802222)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1495"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038977"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q324638"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "「神宿る島」宗像・沖ノ島と関連遺産群"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(130.1056 34.245)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1535"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038976,Q23038977"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q55524104"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "百舌鳥・古市古墳群"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(135.6094 34.5622)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1593"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038977,Q23038978"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q11402500"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "北海道・北東北の縄文遺跡群"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(140.552216666 41.065555555)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1632"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038977,Q23038979"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q127378385"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "佐渡島の金山"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(138.257777777 38.040833333)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "1698"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038978"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1333799"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "法隆寺地域の仏教建造物"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(135.734236 34.614275)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "660"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038972,Q23038976,Q23038978,Q23038980"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q188754"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "姫路城"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(134.693611111 34.839444444)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "661"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038972,Q23038978"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q874027"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "古都京都の文化財"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(135.752778 35.060278)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "688"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038976,Q23038978"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q877626"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "白川郷・五箇山の合掌造り集落"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(136.90638889 36.25694444)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "734"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038978,Q23038979"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q231140"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "原爆ドーム"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(132.453611111 34.395555555)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "775"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038980"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q191763"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "厳島神社"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(132.320105 34.29577)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "776"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038972,Q23038976,Q23038978,Q23038980"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1055749"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "古都奈良の文化財"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(135.83944 34.67556)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "870"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038976,Q23038977,Q23038978,Q23038980"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1063133"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "日光の社寺"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(139.5994 36.7565)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "913"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038972,Q23038978,Q23038980"
+        }
+      },
+      {
+        "site": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q1333330"
+        },
+        "siteLabel": {
+          "xml:lang": "ja",
+          "type": "literal",
+          "value": "琉球王国のグスク及び関連遺産群"
+        },
+        "coordSample": {
+          "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+          "type": "literal",
+          "value": "Point(127.683 26.2086)"
+        },
+        "unescoIdSample": {
+          "type": "literal",
+          "value": "972"
+        },
+        "criteria": {
+          "type": "literal",
+          "value": "Q23038976,Q23038977,Q23038980"
+        }
+      }
+    ]
+  }
+}
