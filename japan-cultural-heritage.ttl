@@ -1,321 +1,47 @@
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix ex: <https://ameniki.github.io/japan-cultural-heritage-lod/japan-cultural-heritage.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:WorldCulturalHeritageSite a rdfs:Class ;
+# クラス
+ex:WorldHeritageSite a rdfs:Class ;
     rdfs:label "世界文化遺産"@ja .
 
-ex:WorldHeritageCriterion a rdfs:Class ;
-    rdfs:label "世界遺産評価基準"@ja .
+# プロパティ
+ex:registrationYear a rdf:Property ;
+    rdfs:label "世界遺産登録年"@ja ;
+    rdfs:domain ex:WorldHeritageSite ;
+    rdfs:range xsd:gYear .
 
-ex:dataset a dcat:Dataset ;
-    dct:description "Wikidataの文化遺産基準(i)〜(vi)とUNESCO IDを用いて抽出した、日本に関係する世界文化遺産のLOD。"@ja ;
-    dct:issued "2026-07-25"^^xsd:date ;
-    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:source <https://www.wikidata.org/> ;
-    dct:title "日本の世界文化遺産LOD"@ja ;
-    dcat:distribution ex:distribution-turtle .
-
-ex:meetsCriterion a owl:ObjectProperty ;
-    rdfs:label "該当する世界遺産評価基準"@ja ;
-    rdfs:domain ex:WorldCulturalHeritageSite ;
-    rdfs:range ex:WorldHeritageCriterion .
-
-ex:site-Q1055749 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "古都奈良の文化財"@ja ;
-    dct:identifier "Q1055749" ;
-    dct:source <https://www.wikidata.org/entity/Q1055749> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/870> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1055749> ;
-    wgs:lat 34.67556 ;
-    wgs:long 135.83944 ;
-    ex:meetsCriterion ex:criterion-Q23038976,
-        ex:criterion-Q23038977,
-        ex:criterion-Q23038978,
-        ex:criterion-Q23038980 ;
-    ex:unescoId "870" .
-
-ex:site-Q1063133 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "日光の社寺"@ja ;
-    dct:identifier "Q1063133" ;
-    dct:source <https://www.wikidata.org/entity/Q1063133> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/913> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1063133> ;
-    wgs:lat 36.7565 ;
-    wgs:long 139.5994 ;
-    ex:meetsCriterion ex:criterion-Q23038972,
-        ex:criterion-Q23038978,
-        ex:criterion-Q23038980 ;
-    ex:unescoId "913" .
-
-ex:site-Q11402500 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "北海道・北東北の縄文遺跡群"@ja ;
-    dct:identifier "Q11402500" ;
-    dct:source <https://www.wikidata.org/entity/Q11402500> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1632> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q11402500> ;
-    wgs:lat 41.065555555 ;
-    wgs:long 140.552216666 ;
-    ex:meetsCriterion ex:criterion-Q23038977,
-        ex:criterion-Q23038979 ;
-    ex:unescoId "1632" .
-
-ex:site-Q127378385 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "佐渡島の金山"@ja ;
-    dct:identifier "Q127378385" ;
-    dct:source <https://www.wikidata.org/entity/Q127378385> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1698> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q127378385> ;
-    wgs:lat 38.040833333 ;
-    wgs:long 138.257777777 ;
-    ex:meetsCriterion ex:criterion-Q23038978 ;
-    ex:unescoId "1698" .
-
-ex:site-Q1333330 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "琉球王国のグスク及び関連遺産群"@ja ;
-    dct:identifier "Q1333330" ;
-    dct:source <https://www.wikidata.org/entity/Q1333330> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/972> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1333330> ;
-    wgs:lat 26.2086 ;
-    wgs:long 127.683 ;
-    ex:meetsCriterion ex:criterion-Q23038976,
-        ex:criterion-Q23038977,
-        ex:criterion-Q23038980 ;
-    ex:unescoId "972" .
-
-ex:site-Q1333799 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "法隆寺地域の仏教建造物"@ja ;
-    dct:identifier "Q1333799" ;
-    dct:source <https://www.wikidata.org/entity/Q1333799> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/660> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1333799> ;
-    wgs:lat 34.614275 ;
-    wgs:long 135.734236 ;
-    ex:meetsCriterion ex:criterion-Q23038972,
-        ex:criterion-Q23038976,
-        ex:criterion-Q23038978,
-        ex:criterion-Q23038980 ;
-    ex:unescoId "660" .
-
-ex:site-Q16482294 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "富士山-信仰の対象と芸術の源泉"@ja ;
-    dct:identifier "Q16482294" ;
-    dct:source <https://www.wikidata.org/entity/Q16482294> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1418> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q16482294> ;
-    wgs:lat 35.3608 ;
-    wgs:long 138.7275 ;
-    ex:meetsCriterion ex:criterion-Q23038977,
-        ex:criterion-Q23038980 ;
-    ex:unescoId "1418" .
-
-ex:site-Q174139 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "石見銀山"@ja ;
-    dct:identifier "Q174139" ;
-    dct:source <https://www.wikidata.org/entity/Q174139> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1246> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q174139> ;
-    wgs:lat 35.107222 ;
-    wgs:long 132.4375 ;
-    ex:meetsCriterion ex:criterion-Q23038976,
-        ex:criterion-Q23038977,
-        ex:criterion-Q23038979 ;
-    ex:unescoId "1246" .
-
-ex:site-Q188754 a ex:WorldCulturalHeritageSite ;
+# インスタンス
+ex:himejiCastle a ex:WorldHeritageSite ;
     rdfs:label "姫路城"@ja ;
-    dct:identifier "Q188754" ;
-    dct:source <https://www.wikidata.org/entity/Q188754> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/661> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q188754> ;
-    wgs:lat 34.839444444 ;
-    wgs:long 134.693611111 ;
-    ex:meetsCriterion ex:criterion-Q23038972,
-        ex:criterion-Q23038978 ;
-    ex:unescoId "661" .
+    schema:addressRegion "兵庫県"@ja ;
+    ex:registrationYear "1993"^^xsd:gYear ;
+    owl:sameAs <https://www.wikidata.org/entity/Q188754> .
 
-ex:site-Q191763 a ex:WorldCulturalHeritageSite ;
+ex:horyuji a ex:WorldHeritageSite ;
+    rdfs:label "法隆寺地域の仏教建造物"@ja ;
+    schema:addressRegion "奈良県"@ja ;
+    ex:registrationYear "1993"^^xsd:gYear ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1333799> .
+
+ex:itsukushimaShrine a ex:WorldHeritageSite ;
     rdfs:label "厳島神社"@ja ;
-    dct:identifier "Q191763" ;
-    dct:source <https://www.wikidata.org/entity/Q191763> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/776> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q191763> ;
-    wgs:lat 34.29577 ;
-    wgs:long 132.320105 ;
-    ex:meetsCriterion ex:criterion-Q23038972,
-        ex:criterion-Q23038976,
-        ex:criterion-Q23038978,
-        ex:criterion-Q23038980 ;
-    ex:unescoId "776" .
+    schema:addressRegion "広島県"@ja ;
+    ex:registrationYear "1996"^^xsd:gYear ;
+    owl:sameAs <https://www.wikidata.org/entity/Q191763> .
 
-ex:site-Q231140 a ex:WorldCulturalHeritageSite ;
+ex:genbakuDome a ex:WorldHeritageSite ;
     rdfs:label "原爆ドーム"@ja ;
-    dct:identifier "Q231140" ;
-    dct:source <https://www.wikidata.org/entity/Q231140> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/775> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q231140> ;
-    wgs:lat 34.395555555 ;
-    wgs:long 132.453611111 ;
-    ex:meetsCriterion ex:criterion-Q23038980 ;
-    ex:unescoId "775" .
+    schema:addressRegion "広島県"@ja ;
+    ex:registrationYear "1996"^^xsd:gYear ;
+    owl:sameAs <https://www.wikidata.org/entity/Q231140> .
 
-ex:site-Q2896261 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "平泉"@ja ;
-    dct:identifier "Q2896261" ;
-    dct:source <https://www.wikidata.org/entity/Q2896261> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1277> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2896261> ;
-    wgs:lat 38.98861111 ;
-    wgs:long 141.11027778 ;
-    ex:meetsCriterion ex:criterion-Q23038976,
-        ex:criterion-Q23038980 ;
-    ex:unescoId "1277rev" .
-
-ex:site-Q324638 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "「神宿る島」宗像・沖ノ島と関連遺産群"@ja ;
-    dct:identifier "Q324638" ;
-    dct:source <https://www.wikidata.org/entity/Q324638> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1535> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q324638> ;
-    wgs:lat 34.245 ;
-    wgs:long 130.1056 ;
-    ex:meetsCriterion ex:criterion-Q23038976,
-        ex:criterion-Q23038977 ;
-    ex:unescoId "1535" .
-
-ex:site-Q55524104 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "百舌鳥・古市古墳群"@ja ;
-    dct:identifier "Q55524104" ;
-    dct:source <https://www.wikidata.org/entity/Q55524104> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1593> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q55524104> ;
-    wgs:lat 34.5622 ;
-    wgs:long 135.6094 ;
-    ex:meetsCriterion ex:criterion-Q23038977,
-        ex:criterion-Q23038978 ;
-    ex:unescoId "1593" .
-
-ex:site-Q55619850 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "ル・コルビュジエの建築作品－近代建築運動への顕著な貢献－"@ja ;
-    dct:identifier "Q55619850" ;
-    dct:source <https://www.wikidata.org/entity/Q55619850> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1321> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q55619850> ;
-    wgs:lat 46.468414 ;
-    wgs:long 6.829336 ;
-    ex:meetsCriterion ex:criterion-Q23038972,
-        ex:criterion-Q23038976,
-        ex:criterion-Q23038980 ;
-    ex:unescoId "1321rev" .
-
-ex:site-Q611345 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "紀伊山地の霊場と参詣道"@ja ;
-    dct:identifier "Q611345" ;
-    dct:source <https://www.wikidata.org/entity/Q611345> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1142> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q611345> ;
-    wgs:lat 33.83694 ;
-    wgs:long 135.77639 ;
-    ex:meetsCriterion ex:criterion-Q23038976,
-        ex:criterion-Q23038977,
-        ex:criterion-Q23038978,
-        ex:criterion-Q23038980 ;
-    ex:unescoId "1142" .
-
-ex:site-Q7751872 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "明治日本の産業革命遺産 製鉄・鉄鋼、造船、石炭産業"@ja ;
-    dct:identifier "Q7751872" ;
-    dct:source <https://www.wikidata.org/entity/Q7751872> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1484> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q7751872> ;
-    wgs:lat 34.43055556 ;
-    wgs:long 131.4122222 ;
-    ex:meetsCriterion ex:criterion-Q23038976,
-        ex:criterion-Q23038978 ;
-    ex:unescoId "1484" .
-
-ex:site-Q7769551 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "富岡製糸場と絹産業遺産群"@ja ;
-    dct:identifier "Q7769551" ;
-    dct:source <https://www.wikidata.org/entity/Q7769551> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1449> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q7769551> ;
-    wgs:lat 36.2553 ;
-    wgs:long 138.8878 ;
-    ex:meetsCriterion ex:criterion-Q23038976,
-        ex:criterion-Q23038978 ;
-    ex:unescoId "1449" .
-
-ex:site-Q874027 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "古都京都の文化財"@ja ;
-    dct:identifier "Q874027" ;
-    dct:source <https://www.wikidata.org/entity/Q874027> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/688> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q874027> ;
-    wgs:lat 35.060278 ;
-    wgs:long 135.752778 ;
-    ex:meetsCriterion ex:criterion-Q23038976,
-        ex:criterion-Q23038978 ;
-    ex:unescoId "688" .
-
-ex:site-Q877626 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "白川郷・五箇山の合掌造り集落"@ja ;
-    dct:identifier "Q877626" ;
-    dct:source <https://www.wikidata.org/entity/Q877626> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/734> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q877626> ;
-    wgs:lat 36.25694444 ;
-    wgs:long 136.90638889 ;
-    ex:meetsCriterion ex:criterion-Q23038978,
-        ex:criterion-Q23038979 ;
-    ex:unescoId "734" .
-
-ex:site-Q93643 a ex:WorldCulturalHeritageSite ;
-    rdfs:label "長崎と天草地方の潜伏キリシタン関連遺産"@ja ;
-    dct:identifier "Q93643" ;
-    dct:source <https://www.wikidata.org/entity/Q93643> ;
-    rdfs:seeAlso <https://whc.unesco.org/en/list/1495> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q93643> ;
-    wgs:lat 32.802222 ;
-    wgs:long 128.903889 ;
-    ex:meetsCriterion ex:criterion-Q23038977 ;
-    ex:unescoId "1495" .
-
-ex:unescoId a rdf:Property ;
-    rdfs:label "UNESCO世界遺産ID"@ja ;
-    rdfs:domain ex:WorldCulturalHeritageSite ;
-    rdfs:range xsd:string .
-
-ex:distribution-turtle a dcat:Distribution ;
-    dct:format "text/turtle" ;
-    dcat:downloadURL <https://ameniki.github.io/japan-cultural-heritage-lod/japan-cultural-heritage.ttl> .
-
-ex:criterion-Q23038979 a ex:WorldHeritageCriterion ;
-    rdfs:label "世界遺産基準 (v)"@ja ;
-    owl:sameAs <https://www.wikidata.org/entity/Q23038979> .
-
-ex:criterion-Q23038972 a ex:WorldHeritageCriterion ;
-    rdfs:label "世界遺産基準 (i)"@ja ;
-    owl:sameAs <https://www.wikidata.org/entity/Q23038972> .
-
-ex:criterion-Q23038977 a ex:WorldHeritageCriterion ;
-    rdfs:label "世界遺産基準 (iii)"@ja ;
-    owl:sameAs <https://www.wikidata.org/entity/Q23038977> .
-
-ex:criterion-Q23038980 a ex:WorldHeritageCriterion ;
-    rdfs:label "世界遺産基準 (vi)"@ja ;
-    owl:sameAs <https://www.wikidata.org/entity/Q23038980> .
-
-ex:criterion-Q23038976 a ex:WorldHeritageCriterion ;
-    rdfs:label "世界遺産基準 (ii)"@ja ;
-    owl:sameAs <https://www.wikidata.org/entity/Q23038976> .
-
-ex:criterion-Q23038978 a ex:WorldHeritageCriterion ;
-    rdfs:label "世界遺産基準 (iv)"@ja ;
-    owl:sameAs <https://www.wikidata.org/entity/Q23038978> .
+ex:sadoGoldMine a ex:WorldHeritageSite ;
+    rdfs:label "佐渡島の金山"@ja ;
+    schema:addressRegion "新潟県"@ja ;
+    ex:registrationYear "2024"^^xsd:gYear ;
+    owl:sameAs <https://www.wikidata.org/entity/Q127378385> .

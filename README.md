@@ -1,80 +1,53 @@
 # 日本の世界文化遺産LOD
 
-Wikidataのオープンデータを基に、日本に関係する世界文化遺産をRDFとして整理したLinked Open Dataです。
+セマンティックWebの講義で学んだRDF、Turtle、URI、外部データとのリンクを確認するために作成した小規模なLODです。
+
+日本の世界文化遺産から次の5件を例として選びました。
+
+- 姫路城
+- 法隆寺地域の仏教建造物
+- 厳島神社
+- 原爆ドーム
+- 佐渡島の金山
 
 ## 公開URL
 
-- RDF（Turtle）: <https://ameniki.github.io/japan-cultural-heritage-lod/japan-cultural-heritage.ttl>
-- 案内ページ: <https://ameniki.github.io/japan-cultural-heritage-lod/>
+- LOD（Turtle）  
+  <https://ameniki.github.io/japan-cultural-heritage-lod/japan-cultural-heritage.ttl>
+- GitHub Pages  
+  <https://ameniki.github.io/japan-cultural-heritage-lod/>
 
-## 収録内容
+## 作成したデータ
 
-- 世界文化遺産: 21件
-- 世界遺産評価基準: 6件（文化遺産基準 (i)〜(vi)）
-- 主な情報:
-  - 日本語名称
-  - UNESCO世界遺産ID
-  - 世界遺産評価基準
-  - Wikidata上の同一リソース
-  - UNESCO公式ページ
-  - Wikidataに登録された代表座標
+5件の文化遺産を `ex:WorldHeritageSite` クラスのインスタンスとして記述しました。
+それぞれに日本語名、都道府県、世界遺産登録年を付けています。
 
-## LODとしての設計
+また、`owl:sameAs` を使ってWikidataのURIと結び付けました。
+これにより、このLODから外部のデータへたどることができます。
 
-各遺産には、GitHub Pagesで参照できるHTTP URIを付与しています。
+例:
 
-```text
-https://ameniki.github.io/japan-cultural-heritage-lod/
-japan-cultural-heritage.ttl#site-Q188754
+```turtle
+ex:himejiCastle a ex:WorldHeritageSite ;
+    rdfs:label "姫路城"@ja ;
+    schema:addressRegion "兵庫県"@ja ;
+    ex:registrationYear "1993"^^xsd:gYear ;
+    owl:sameAs <https://www.wikidata.org/entity/Q188754> .
 ```
-
-外部データとの接続には次の語彙を利用しています。
-
-- `owl:sameAs`: Wikidata上の同一リソース
-- `rdfs:seeAlso`: UNESCO World Heritage Centreの個別ページ
-- `dct:source`: データの出典
-- `wgs:lat` / `wgs:long`: WGS84の緯度・経度
-
-これにより、文化遺産名の一覧にとどまらず、評価基準を介した比較や、Wikidata・UNESCOの追加情報への連携ができます。
 
 ## ファイル
 
-| ファイル | 内容 |
-|---|---|
-| `japan-cultural-heritage.ttl` | 公開するRDFデータ |
-| `generate_lod.py` | WikidataからRDFを生成するRDFLibプログラム |
-| `verify_lod.py` | 構文と必須関係を検証するプログラム |
-| `data/wikidata-sites.json` | 生成時に取得したSPARQL結果 |
-| `queries/cultural-heritage.rq` | データ抽出用SPARQL |
-| `queries/example.rq` | 生成したLODに対する検索例 |
+- `japan-cultural-heritage.ttl`: 作成したLOD
+- `queries/example.rq`: 文化遺産名と登録年を取得するSPARQLクエリ
+- `index.html`: GitHub Pagesの簡単な案内ページ
 
-## 再生成と検証
+## 出典とライセンス
 
-Python 3と[`uv`](https://docs.astral.sh/uv/)を利用する場合:
-
-```bash
-uv venv
-uv pip install -r requirements.txt
-.venv/bin/python generate_lod.py
-.venv/bin/python verify_lod.py
-```
-
-検証成功時は `validation=PASS` と、遺産数・評価基準数・トリプル数が表示されます。
-
-## データ源とライセンス
-
-- データ源: [Wikidata](https://www.wikidata.org/)
-- Wikidataのデータライセンス: [CC0 1.0](https://www.wikidata.org/wiki/Wikidata:Licensing)
-- 本リポジトリ: [CC0 1.0 Universal](LICENSE)
-
-抽出条件は、所在地の国が日本、世界遺産に指定されている、UNESCO IDを持つ、文化遺産基準 (i)〜(vi) のいずれかを持つ、の4点です。
-
-## データ上の注意
-
-- 内容は2026年7月25日に取得したWikidataのスナップショットです。
-- シリアル・トランスナショナル遺産の座標は、個々の構成資産ではなくWikidataに登録された代表座標の場合があります。
-- WikidataのUNESCO IDに `rev` が含まれる場合、UNESCO公式ページへのリンクでは数字部分を使用しています。
+- 外部リンク先: [Wikidata](https://www.wikidata.org/)
+- 登録年の確認: [UNESCO World Heritage Centre](https://whc.unesco.org/)
+- ライセンス: [CC0 1.0 Universal](LICENSE)
 
 ## 生成AIの利用
 
-このLODの設計、生成プログラム、READMEの作成にはOpenAI Codexを利用しました。生成結果について、RDFLibによる構文解析、件数、必須リンク、評価基準との関係を検証しています。
+Turtleの記述、READMEの整理、GitHubでの公開作業にOpenAI Codexを利用しました。
+作成後にTurtleの構文と公開URLを確認しています。
