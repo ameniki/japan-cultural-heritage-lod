@@ -1,47 +1,99 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix ex: <https://ameniki.github.io/japan-cultural-heritage-lod/japan-cultural-heritage.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# クラス
-ex:WorldHeritageSite a rdfs:Class ;
-    rdfs:label "世界文化遺産"@ja .
+ex:CulturalProperty a rdfs:Class ;
+    rdfs:label "文化財"@ja .
 
-# プロパティ
+ex:Prefecture a rdfs:Class ;
+    rdfs:label "都道府県"@ja .
+
+ex:WorldHeritageSite a rdfs:Class ;
+    rdfs:label "世界文化遺産"@ja ;
+    rdfs:subClassOf ex:CulturalProperty .
+
+ex:dataset a dcat:Dataset ;
+    dct:creator "野口凌"@ja ;
+    dct:description "日本の世界文化遺産5件について、所在都道府県・世界遺産登録年・UNESCO世界遺産IDを記述したLOD。"@ja ;
+    dct:issued "2026-08-03"^^xsd:date ;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dct:source <https://whc.unesco.org/>,
+        <https://www.wikidata.org/> ;
+    dct:title "日本の世界文化遺産LOD"@ja ;
+    dcat:downloadURL <https://ameniki.github.io/japan-cultural-heritage-lod/japan-cultural-heritage.ttl> .
+
+ex:genbakuDome a ex:WorldHeritageSite ;
+    rdfs:label "原爆ドーム"@ja ;
+    rdfs:seeAlso <https://whc.unesco.org/en/list/775> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q231140> ;
+    ex:locatedIn ex:hiroshima ;
+    ex:registrationYear "1996"^^xsd:gYear ;
+    ex:unescoId "775"^^xsd:string .
+
+ex:himejiCastle a ex:WorldHeritageSite ;
+    rdfs:label "姫路城"@ja ;
+    rdfs:seeAlso <https://whc.unesco.org/en/list/661> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q188754> ;
+    ex:locatedIn ex:hyogo ;
+    ex:registrationYear "1993"^^xsd:gYear ;
+    ex:unescoId "661"^^xsd:string .
+
+ex:horyuji a ex:WorldHeritageSite ;
+    rdfs:label "法隆寺地域の仏教建造物"@ja ;
+    rdfs:seeAlso <https://whc.unesco.org/en/list/660> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1333799> ;
+    ex:locatedIn ex:nara ;
+    ex:registrationYear "1993"^^xsd:gYear ;
+    ex:unescoId "660"^^xsd:string .
+
+ex:itsukushimaShrine a ex:WorldHeritageSite ;
+    rdfs:label "厳島神社"@ja ;
+    rdfs:seeAlso <https://whc.unesco.org/en/list/776> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q191763> ;
+    ex:locatedIn ex:hiroshima ;
+    ex:registrationYear "1996"^^xsd:gYear ;
+    ex:unescoId "776"^^xsd:string .
+
+ex:locatedIn a rdf:Property ;
+    rdfs:label "所在都道府県"@ja ;
+    rdfs:domain ex:WorldHeritageSite ;
+    rdfs:range ex:Prefecture .
+
 ex:registrationYear a rdf:Property ;
     rdfs:label "世界遺産登録年"@ja ;
     rdfs:domain ex:WorldHeritageSite ;
     rdfs:range xsd:gYear .
 
-# インスタンス
-ex:himejiCastle a ex:WorldHeritageSite ;
-    rdfs:label "姫路城"@ja ;
-    schema:addressRegion "兵庫県"@ja ;
-    ex:registrationYear "1993"^^xsd:gYear ;
-    owl:sameAs <https://www.wikidata.org/entity/Q188754> .
-
-ex:horyuji a ex:WorldHeritageSite ;
-    rdfs:label "法隆寺地域の仏教建造物"@ja ;
-    schema:addressRegion "奈良県"@ja ;
-    ex:registrationYear "1993"^^xsd:gYear ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1333799> .
-
-ex:itsukushimaShrine a ex:WorldHeritageSite ;
-    rdfs:label "厳島神社"@ja ;
-    schema:addressRegion "広島県"@ja ;
-    ex:registrationYear "1996"^^xsd:gYear ;
-    owl:sameAs <https://www.wikidata.org/entity/Q191763> .
-
-ex:genbakuDome a ex:WorldHeritageSite ;
-    rdfs:label "原爆ドーム"@ja ;
-    schema:addressRegion "広島県"@ja ;
-    ex:registrationYear "1996"^^xsd:gYear ;
-    owl:sameAs <https://www.wikidata.org/entity/Q231140> .
-
 ex:sadoGoldMine a ex:WorldHeritageSite ;
     rdfs:label "佐渡島の金山"@ja ;
-    schema:addressRegion "新潟県"@ja ;
+    rdfs:seeAlso <https://whc.unesco.org/en/list/1698> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q127378385> ;
+    ex:locatedIn ex:niigata ;
     ex:registrationYear "2024"^^xsd:gYear ;
-    owl:sameAs <https://www.wikidata.org/entity/Q127378385> .
+    ex:unescoId "1698"^^xsd:string .
+
+ex:unescoId a rdf:Property ;
+    rdfs:label "UNESCO世界遺産ID"@ja ;
+    rdfs:domain ex:WorldHeritageSite ;
+    rdfs:range xsd:string .
+
+ex:hyogo a ex:Prefecture ;
+    rdfs:label "兵庫県"@ja ;
+    owl:sameAs <https://www.wikidata.org/entity/Q130290> .
+
+ex:nara a ex:Prefecture ;
+    rdfs:label "奈良県"@ja ;
+    owl:sameAs <https://www.wikidata.org/entity/Q131287> .
+
+ex:niigata a ex:Prefecture ;
+    rdfs:label "新潟県"@ja ;
+    owl:sameAs <https://www.wikidata.org/entity/Q132705> .
+
+ex:hiroshima a ex:Prefecture ;
+    rdfs:label "広島県"@ja ;
+    owl:sameAs <https://www.wikidata.org/entity/Q617375> .
+

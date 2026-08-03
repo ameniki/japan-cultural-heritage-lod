@@ -18,12 +18,19 @@
   <h1>日本の世界文化遺産LOD</h1>
   <p>
     セマンティックWebの講義で学んだ内容を使い、
-    日本の世界文化遺産5件をTurtle形式で記述しました。
+    日本の世界文化遺産5件と、その所在都道府県4件をTurtle形式で記述しました。
+    RDFLibで生成しています（75トリプル）。
   </p>
   <ul>
     <li><a href="japan-cultural-heritage.ttl">LOD（Turtle）を開く</a></li>
     <li><a href="https://github.com/ameniki/japan-cultural-heritage-lod">GitHubリポジトリを開く</a></li>
   </ul>
-  <p>データはWikidataのURIと <code>owl:sameAs</code> でつないでいます。</p>
+  <p>
+    クラスは <code>ex:CulturalProperty</code>、<code>ex:WorldHeritageSite</code>、
+    <code>ex:Prefecture</code> の3つで、遺産と都道府県は <code>ex:locatedIn</code> で結んでいます。
+    それぞれ <code>owl:sameAs</code> でWikidataのURIと、<code>rdfs:seeAlso</code> で
+    UNESCO世界遺産センターのページとつないでいます。
+  </p>
+  <p>ライセンス: <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></p>
 </body>
 </html>
