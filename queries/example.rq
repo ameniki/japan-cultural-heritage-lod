@@ -1,10 +1,13 @@
+# 世界文化遺産の名称・所在都道府県・登録年を、登録年の古い順に取得する
 PREFIX ex: <https://ameniki.github.io/japan-cultural-heritage-lod/japan-cultural-heritage.ttl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?name ?year
+SELECT ?name ?prefName ?year
 WHERE {
   ?site a ex:WorldHeritageSite ;
         rdfs:label ?name ;
+        ex:locatedIn ?pref ;
         ex:registrationYear ?year .
+  ?pref rdfs:label ?prefName .
 }
-ORDER BY ?year
+ORDER BY ?year ?name

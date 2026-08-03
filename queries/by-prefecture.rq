@@ -1,0 +1,13 @@
+# 都道府県ごとの世界文化遺産の件数と、そのWikidata URIを取得する
+PREFIX ex: <https://ameniki.github.io/japan-cultural-heritage-lod/japan-cultural-heritage.ttl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?prefName ?wikidata (COUNT(?site) AS ?count)
+WHERE {
+  ?site ex:locatedIn ?pref .
+  ?pref rdfs:label ?prefName ;
+        owl:sameAs ?wikidata .
+}
+GROUP BY ?prefName ?wikidata
+ORDER BY DESC(?count) ?prefName
