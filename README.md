@@ -72,4 +72,4 @@ python3 -m venv .venv
 
 ## 生成AIの利用
 
-Turtleの記述、スクリプトの作成、READMEの整理、GitHubでの公開作業にOpenAI CodexおよびClaudeを利用しました。生成結果については、RDFLibでのパース、Wikidata APIによるQID・登録年・UNESCO IDの照合、公開URLのHTTPステータス確認を行って妥当性を確認しています。
+生成スクリプトの書き方やSPARQLクエリの構文確認、検証スクリプトの作成など、作業の一部でOpenAI CodexおよびClaudeを利用しました。題材の選定、スキーマの設計、リンク先とするWikidataエンティティの判断は自分で行いました。各遺産のQID・世界遺産ID・登録年はWikidata API等で照合し、Turtleの構文・件数と公開URLは検証スクリプトで確認しています。
